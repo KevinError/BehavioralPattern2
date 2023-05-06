@@ -10,9 +10,10 @@ public class IdleState implements StateOfVendingMachine{
         Snack snack = machine.selectSnackByName(snackName);
         if (snack.isAvailable()) {
             System.out.println("Selected snack: " + snack.getName());
+            machine.setSnack(snack);
             machine.setState((StateOfVendingMachine) new WaitingForMoneyState());
         } else {
-            System.out.println("Invalid snack selection");
+            System.out.println(snack.getName() + "'s quantity is 0");
         }
     }
 

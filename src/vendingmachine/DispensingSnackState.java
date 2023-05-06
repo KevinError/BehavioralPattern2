@@ -15,10 +15,8 @@ public class DispensingSnackState implements StateOfVendingMachine{
     @Override
     public void dispenseSnack(VendingMachine machine) {
         Snack snack = machine.getSelectedSnack();
-        double insertedMoney = machine.getInsertedMoney();
-        if (snack.getQuantity() > 0 && insertedMoney >= snack.getPrice()) {
-            snack.decreaseQuantity(1);
-            double change = insertedMoney - snack.getPrice();
-        }
+        machine.getSnackDispenseHandler().handleRequest(snack);
+        System.out.println(snack.getName() + " has been dispensed");
+        machine.setState(new IdleState());
     }
 }

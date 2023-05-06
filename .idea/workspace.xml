@@ -5,17 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3c18922-d6ec-4f6b-a83a-dd9c3ad92dd9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/vendingmachine/CheetosHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendingmachine/CokeHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendingmachine/DoritosHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendingmachine/KitKatHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendingmachine/PepsiHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendingmachine/SnickersHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BehavioralPattern2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BehavioralPattern2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VendingMachineMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vendingmachine/DispensingSnackState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendingmachine/DispensingSnackState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vendingmachine/IdleState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendingmachine/IdleState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vendingmachine/Snack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendingmachine/Snack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vendingmachine/SnackDispenseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendingmachine/SnackDispenseHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendingmachine/StateOfVendingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendingmachine/StateOfVendingMachine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vendingmachine/VendingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendingmachine/VendingMachine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vendingmachine/WaitingForMoneyState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendingmachine/WaitingForMoneyState.java" afterDir="false" />
     </list>
@@ -50,7 +52,12 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "18",
+    "last_opened_file_path": "C:/Users/khk40/Documents/GitHub/BehavioralPattern2",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

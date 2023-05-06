@@ -7,8 +7,10 @@ public abstract class SnackDispenseHandler {
         this.next = next;
     }
 
-    public void handleRequest(){
-
+    public void handleRequest(Snack snack){
+        if(next != null) {
+            next.handleRequest(snack);
+        }
     }
 
 

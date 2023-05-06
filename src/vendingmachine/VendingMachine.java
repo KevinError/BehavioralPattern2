@@ -8,6 +8,7 @@ public class VendingMachine {
     private Map<String, Snack> snacks;
     private StateOfVendingMachine state = new IdleState();
     private SnackDispenseHandler snackDispenseHandler;
+    private Snack selectedSnack;
 
     public VendingMachine() {
         snacks = new HashMap<>();
@@ -17,16 +18,12 @@ public class VendingMachine {
         snacks.put("Doritos",new Snack("Doritos", 1.50, 4));
         snacks.put("KitKat", new Snack("KitKat", 1.25, 6));
         snacks.put("Snickers",new Snack("Snickers", 1.50, 0));
-        snackDispenseHandler = new SnackDispenseHandler();
+        snackDispenseHandler = (new CokeHandler(new PepsiHandler(new CheetosHandler(new DoritosHandler(new KitKatHandler(new SnickersHandler(null)))))));
 
     }
 
     public Snack selectSnackByName(String snackName) {
         return snacks.get(snackName);
-    }
-
-    public Snack getSelectedSnack() {
-        return snackDispenseHandler;
     }
 
     public void selectSnack(String snackName){
@@ -45,8 +42,17 @@ public class VendingMachine {
         return snackDispenseHandler;
     }
 
+
     public void setState(StateOfVendingMachine state) {
         this.state = state;
+    }
+
+    public void setSnack(Snack snack){
+        this.selectedSnack = snack;
+    }
+
+    public Snack getSelectedSnack(){
+        return this.selectedSnack;
     }
 
     public StateOfVendingMachine getState() {

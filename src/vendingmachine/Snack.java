@@ -26,4 +26,6 @@ public class Snack {
     public boolean isAvailable() {
         return quantity > 0;
     }
+
+    public void loseQuantity(){this.quantity--;}
 }
