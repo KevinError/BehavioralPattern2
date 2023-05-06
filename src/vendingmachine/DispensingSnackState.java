@@ -1,25 +1,24 @@
 package vendingmachine;
 
-public class DispensingSnackState {
-    private VendingMachine vendingMachine;
+public class DispensingSnackState implements StateOfVendingMachine{
 
-    public DispensingSnackState(VendingMachine vendingMachine) {
-        this.vendingMachine = vendingMachine;
+    public DispensingSnackState() {
     }
-
-    public void selectSnack(String snackName) {
-        System.out.println("Snack already selected");
+    @Override
+    public void selectSnack(VendingMachine machine, String snackName) {
+        System.out.println("Snack is already selected");
     }
-
-    public void insertMoney(double amount) {
-        System.out.println("Money already inserted");
+    @Override
+    public void insertMoney(VendingMachine machine, double amount) {
+        System.out.println("Money is already inserted");
     }
-
-    public void dispenseSnack() {
-        Snack snack = vendingMachine.getSelectedSnack();
-        double insertedMoney = vendingMachine.getInsertedMoney();
+    @Override
+    public void dispenseSnack(VendingMachine machine) {
+        Snack snack = machine.getSelectedSnack();
+        double insertedMoney = machine.getInsertedMoney();
         if (snack.getQuantity() > 0 && insertedMoney >= snack.getPrice()) {
             snack.decreaseQuantity(1);
             double change = insertedMoney - snack.getPrice();
-            System
+        }
+    }
 }

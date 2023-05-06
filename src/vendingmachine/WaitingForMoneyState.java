@@ -13,8 +13,8 @@ public class WaitingForMoneyState implements StateOfVendingMachine{
     public void insertMoney(VendingMachine machine, double amount) {
         double snackPrice = machine.getSelectedSnack().getPrice();
         if (amount >= snackPrice) {
-            vendingMachine.setInsertedMoney(amount);
-            vendingMachine.setCurrentState(vendingMachine.getDispensingSnackState());
+            machine.setInsertedMoney(amount);
+            machine.setState(new DispensingSnackState());
             System.out.println("Money inserted: $" + amount);
         } else {
             System.out.println("Insufficient money inserted");
@@ -23,7 +23,7 @@ public class WaitingForMoneyState implements StateOfVendingMachine{
 
     @Override
     public void dispenseSnack(VendingMachine machine) {
-        System.out.println("Please insert money first");
+        System.out.println("Please insert the money first");
     }
 
 }

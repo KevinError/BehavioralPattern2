@@ -25,6 +25,10 @@ public class VendingMachine {
         return snacks.get(snackName);
     }
 
+    public Snack getSelectedSnack() {
+        return snackDispenseHandler;
+    }
+
     public void selectSnack(String snackName){
         getState().selectSnack(this, snackName);
     }
