@@ -1,7 +1,7 @@
 package vendingmachine;
 
 public interface StateOfVendingMachine {
-    void selectSnack(String snackName);
-    void insertMoney(double amount);
-    void dispenseSnack();
+    void selectSnack(VendingMachine machine, String snackName);
+    void insertMoney(VendingMachine machine, double amount);
+    void dispenseSnack(VendingMachine machine);
 }

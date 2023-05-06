@@ -1,18 +1,17 @@
 package vendingmachine;
 
-public class WaitingForMoneyState {
-    private VendingMachine vendingMachine;
+public class WaitingForMoneyState implements StateOfVendingMachine{
 
-    public WaitingForMoneyState(VendingMachine vendingMachine) {
-        this.vendingMachine = vendingMachine;
+    public WaitingForMoneyState() {
     }
 
-    public void selectSnack(String snackName) {
-        System.out.println("Snack already selected");
+    @Override
+    public void selectSnack(VendingMachine machine, String snackName) {
+        System.out.println("Snack is already selected");
     }
-
-    public void insertMoney(double amount) {
-        double snackPrice = vendingMachine.getSelectedSnack().getPrice();
+    @Override
+    public void insertMoney(VendingMachine machine, double amount) {
+        double snackPrice = machine.getSelectedSnack().getPrice();
         if (amount >= snackPrice) {
             vendingMachine.setInsertedMoney(amount);
             vendingMachine.setCurrentState(vendingMachine.getDispensingSnackState());
@@ -22,7 +21,8 @@ public class WaitingForMoneyState {
         }
     }
 
-    public void dispenseSnack() {
+    @Override
+    public void dispenseSnack(VendingMachine machine) {
         System.out.println("Please insert money first");
     }
 

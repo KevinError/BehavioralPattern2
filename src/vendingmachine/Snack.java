@@ -23,10 +23,6 @@ public class Snack {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
     public boolean isAvailable() {
         return quantity > 0;
     }

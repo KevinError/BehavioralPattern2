@@ -1,59 +1,51 @@
 package vendingmachine;
 
+import javax.swing.plaf.nimbus.State;
+import java.util.HashMap;
+import java.util.Map;
+
 public class VendingMachine {
-    private Snack[] snacks;
-    private int currentState;
-    private StateOfVendingMachine[] states;
+    private Map<String, Snack> snacks;
+    private StateOfVendingMachine state = new IdleState();
     private SnackDispenseHandler snackDispenseHandler;
 
     public VendingMachine() {
-        snacks = new Snack[]{
-                new Snack("Coke", 1.25, 5),
-                new Snack("Pepsi", 1.50, 3),
-                new Snack("Cheetos", 1.00, 2),
-                new Snack("Doritos", 1.50, 4),
-                new Snack("KitKat", 1.25, 6),
-                new Snack("Snickers", 1.50, 0)
-        };
-        currentState = 0;
-        states = new StateOfVendingMachine[]{
-                new IdleState(this),
-                new WaitingForMoneyState(this),
-                new DispensingSnackState(this)
-        };
-        snackDispenseHandler = new CokeDispenseHandler(new PepsiDispenseHandler(new CheetosDispenseHandler(
-                new DoritosDispenseHandler(new KitKatDispenseHandler(new SnickersDispenseHandler(null))))));
+        snacks = new HashMap<>();
+        snacks.put("Coke", new Snack("Coke", 1.25, 5));
+        snacks.put("Pepsi",new Snack("Pepsi", 1.50, 3));
+        snacks.put("Cheetos", new Snack("Cheetos", 1.00, 2));
+        snacks.put("Doritos",new Snack("Doritos", 1.50, 4));
+        snacks.put("KitKat", new Snack("KitKat", 1.25, 6));
+        snacks.put("Snickers",new Snack("Snickers", 1.50, 0));
+        snackDispenseHandler = new SnackDispenseHandler();
+
     }
 
-    public void selectSnack(int index) {
-        currentState = states[currentState].selectSnack(index);
+    public Snack selectSnackByName(String snackName) {
+        return snacks.get(snackName);
+    }
+
+    public void selectSnack(String snackName){
+        getState().selectSnack(this, snackName);
     }
 
     public void insertMoney(double amount) {
-        currentState = states[currentState].insertMoney(amount);
+        getState().insertMoney(this, amount);
     }
 
     public void dispenseSnack() {
-        currentState = states[currentState].dispenseSnack();
-    }
-
-    public Snack[] getSnacks() {
-        return snacks;
-    }
-
-    public Snack getSnack(int index) {
-        return snacks[index];
+        getState().dispenseSnack(this);
     }
 
     public SnackDispenseHandler getSnackDispenseHandler() {
         return snackDispenseHandler;
     }
 
-    public void setState(int state) {
-        currentState = state;
+    public void setState(StateOfVendingMachine state) {
+        this.state = state;
     }
 
-    public int getState() {
-        return currentState;
+    public StateOfVendingMachine getState() {
+        return this.state;
     }
 }

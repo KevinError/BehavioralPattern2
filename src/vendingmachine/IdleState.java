@@ -1,31 +1,28 @@
 package vendingmachine;
 
 public class IdleState implements StateOfVendingMachine{
-    private VendingMachine vendingMachine;
 
-    public IdleState(VendingMachine vendingMachine) {
-        this.vendingMachine = vendingMachine;
+    public IdleState() {
     }
 
     @Override
-    public void selectSnack(String snackName) {
-        Snack snack = vendingMachine.getSnackByName(snackName);
-        if (snack != null) {
-            vendingMachine.setSelectedSnack(snack);
+    public void selectSnack(VendingMachine machine, String snackName) {
+        Snack snack = machine.selectSnackByName(snackName);
+        if (snack.isAvailable()) {
             System.out.println("Selected snack: " + snack.getName());
-            vendingMachine.setState(vendingMachine.getWaitingForMoneyState());
+            machine.setState((StateOfVendingMachine) new WaitingForMoneyState());
         } else {
             System.out.println("Invalid snack selection");
         }
     }
 
     @Override
-    public void insertMoney(double amount) {
+    public void insertMoney(VendingMachine machine, double amount) {
         System.out.println("Please select a snack first");
     }
 
     @Override
-    public void dispenseSnack() {
+    public void dispenseSnack(VendingMachine machine) {
         System.out.println("Please select a snack first");
     }
 }

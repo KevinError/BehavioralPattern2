@@ -5,19 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3c18922-d6ec-4f6b-a83a-dd9c3ad92dd9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vendingmachine/DispensingSnackState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vendingmachine/IdleState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vendingmachine/SnackDispenseHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vendingmachine/StateOfVendingMachine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vendingmachine/VendingMachine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vendingmachine/WaitingForMoneyState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BehavioralPattern2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BehavioralPattern2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendingmachine/DispensingSnackState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendingmachine/DispensingSnackState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendingmachine/IdleState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendingmachine/IdleState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vendingmachine/Snack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendingmachine/Snack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendingmachine/SnackDispenseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendingmachine/SnackDispenseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendingmachine/StateOfVendingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendingmachine/StateOfVendingMachine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendingmachine/VendingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendingmachine/VendingMachine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendingmachine/WaitingForMoneyState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendingmachine/WaitingForMoneyState.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
